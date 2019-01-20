@@ -1,17 +1,46 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+  <ion-row
+    padding-horizontal
+      >
+    <ion-col col-11 padding-top>
+      <ion-searchbar
+        [(ngModel)]="search_product"
+        [showCancelButton]="true"
+        (ionInput)="onInput($event)"
+        no-padding
+        placeholder="Search the product"
+      >
+      </ion-searchbar>
+    </ion-col>
+    <ion-col col-1 text-center no-padding padding-top class="margin_auto">
+      <ion-icon
+        ios="ios-chatbubbles-outline"
+        name="ios-chatbubbles-outline"
+      ></ion-icon>
+    </ion-col>
+  </ion-row>
+  <ion-row padding-horizontal>
+    <ion-col col-6 text-left> 
+      <span> New Product</span>
+     </ion-col>
+    <ion-col col-6 text-right>
+      <span>more</span>
+      <ion-icon name="ios-arrow-forward"></ion-icon>
+    </ion-col>
+  </ion-row>
+  <ion-row padding-horizontal>
+    <ion-col col-55 no-padding *ngFor="let product of new_products;let i =index" class="new_products" margin-right> 
+      <ion-row>
+        <ion-col col-6 class="margin_auto">
+          <img [src]="product.image" [ngClass]="{'full_width': true}">
+        </ion-col>
+        <ion-col col-6 class="margin_auto">
+          <b>{{product.name}}</b>
+          <br>
+          <span class="prices">$ {{product.price}}</span>
+        </ion-col>
+      </ion-row>
+     </ion-col>
+  </ion-row>
+  
 </ion-content>
