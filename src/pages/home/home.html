@@ -1,7 +1,8 @@
 <ion-content>
   <ion-row
     padding-horizontal
-      >
+    [ngStyle]="{ 'background-image': 'url(' + background + '})' }"
+  >
     <ion-col col-11 padding-top>
       <ion-searchbar
         [(ngModel)]="search_product"
@@ -16,31 +17,76 @@
       <ion-icon
         ios="ios-chatbubbles-outline"
         name="ios-chatbubbles-outline"
+        [ngStyle]="{'font-size': 'font-size: 1.8em'}"
       ></ion-icon>
     </ion-col>
+    <ion-col col-15></ion-col>
+    <ion-col col-9 margin text-center class="title">
+      <span class="principal">NEW COLLECTIONS</span>
+    </ion-col>
+    <ion-col col-15></ion-col>
+    <ion-col col-12 margin-bottom text-center>
+      <span class="year"> &bull; 2016 &bull;</span>
+    </ion-col>
   </ion-row>
-  <ion-row padding-horizontal>
-    <ion-col col-6 text-left> 
-      <span> New Product</span>
-     </ion-col>
+  <ion-row padding-horizontal class="sections">
+    <ion-col col-6 text-left> <span> New Product</span> </ion-col>
     <ion-col col-6 text-right>
       <span>more</span>
       <ion-icon name="ios-arrow-forward"></ion-icon>
     </ion-col>
   </ion-row>
   <ion-row padding-horizontal>
-    <ion-col col-55 no-padding *ngFor="let product of new_products;let i =index" class="new_products" margin-right> 
+    <ion-col
+      col-55
+      no-padding
+      *ngFor="let product of new_products"
+      class="new_products"
+      margin-right
+    >
       <ion-row>
         <ion-col col-6 class="margin_auto">
-          <img [src]="product.image" [ngClass]="{'full_width': true}">
+          <img [src]="product.image" [ngClass]="{ full_width: true }" />
         </ion-col>
         <ion-col col-6 class="margin_auto">
-          <b>{{product.name}}</b>
-          <br>
-          <span class="prices">$ {{product.price}}</span>
+          <b>{{ product.name }}</b> <br />
+          <span class="prices">$ {{ product.price }}</span>
         </ion-col>
       </ion-row>
-     </ion-col>
+    </ion-col>
   </ion-row>
-  
+  <ion-row margin-horizontal class="sections">
+    <ion-col col-6 text-left> <span> The recommended</span> </ion-col>
+    <ion-col col-6 text-right>
+      <span>more</span>
+      <ion-icon name="ios-arrow-forward"></ion-icon>
+    </ion-col>
+  </ion-row>
+  <ion-row
+  margin-horizontal
+    margin-bottom
+    *ngFor="let product of recommended_products"
+    class="new_products"
+  >
+    <ion-col col-12 no-padding>
+      <ion-row>
+        <ion-col col-4 class="margin_auto">
+          <img [src]="product.image" [ngClass]="{ full_width: true }" />
+        </ion-col>
+        <ion-col col-8 class="margin_auto">
+          <b>{{ product.name }}</b> <br />
+          <span class="description">{{ product.description }}</span
+          ><br />
+          <ion-row>
+            <ion-col col-6>
+              <span class="prices">$ {{ product.price }}</span>
+            </ion-col>
+            <ion-col col-6 text-right>
+              <button class="button" text-right>buy</button>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
 </ion-content>

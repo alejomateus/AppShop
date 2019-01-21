@@ -1,8 +1,38 @@
 page-home {
+    
     .prices{
         color:#f59822;
     }
     .new_products{
         background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 17px 55px -34px rgba(0,0,0,0.75);
+    }
+    .first_image{
+    
+    }
+    .title{
+        color:#fff;
+        border: 1px solid #fff;
+        .principal{
+            font-size:25px;
+        }
+    }
+    .sections{
+        padding-top: 10px;
+        padding-top: 4px;
+    }
+    .year{
+        color:#fff;
+    }
+    .description{
+        font-size: 10px;
+        color: #b4bcca;
+    }
+    .buy_button{
+        background: #566a8c !important;
+        border-radius: 10px;
+        color:#fff;
+        padding: 3px 8px;
     }
 }
