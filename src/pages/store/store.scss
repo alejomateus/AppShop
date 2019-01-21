@@ -1,0 +1,54 @@
+page-store {
+    .brand{
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 17px 55px -34px rgba(0,0,0,0.75);
+        img{
+            width: 100%;
+            border-radius: 50%;
+            padding:10px;
+        }
+        b{
+            font-size: 14px;
+        }
+        span{
+            font-size: 10px;
+            color: #b4bcca !important;
+        }
+        .quantity{
+            color:#f59822;
+            font-size: 14px;
+        }
+        .image{
+            border-radius: 0%;
+        }
+    }
+    .brand_products{
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 17px 55px -34px rgba(0,0,0,0.75);
+        b{
+            font-size: 14px;
+        }
+        .quantity{
+            color:#f59822;
+            font-size: 18px;
+        }
+        .description{
+            font-size: 10px;
+            color: #b4bcca !important;
+        }
+        
+        .image{
+            border-radius: 50%;
+            padding:5px;
+        }
+        .ishot{
+            position:absolute;
+            width:20px;
+            z-index:200; 
+            border-radius: 50px;
+            top:0px;right: 0px;
+        }
+    }
+}
