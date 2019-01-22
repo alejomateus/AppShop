@@ -66,8 +66,4 @@ export class StorePage {
     ]
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad StorePage');
-  }
-
 }

@@ -1,5 +1,5 @@
 <ion-content>
-  <ion-row padding-horizontal>
+  <ion-row padding-horizontal class="header">
     <ion-col col-11 padding-top>
       <ion-searchbar
         [(ngModel)]="search_product"
@@ -7,6 +7,7 @@
         (ionInput)="onInput($event)"
         no-padding
         placeholder="Search the product"
+        
       >
       </ion-searchbar>
     </ion-col>

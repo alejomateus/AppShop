@@ -1,3 +1,40 @@
 page-shopcart {
-
+    .products{
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 17px 55px -34px rgba(0,0,0,0.75);
+        .prices{
+            color:#f59822;
+        }
+    }
+    .iconos{
+        border: 1px solid #b4bcca !important;
+        padding: 2px;
+    }
+    .box_sum{
+        background-color: #fff;
+        .price{
+            color: #b4bcca !important;
+        }
+        .totalprice{
+            color:#f5bf22;
+        }
+    }
+    .title{
+        color: #566a8c !important;
+    }
+    hr{
+        width: 100%;
+        color: #b4bcca !important;
+        height: 1px;
+    }
+    .button{
+        background: #566a8c !important;
+        border-radius: 30px;
+        color:#fff;
+        padding: 3px 8px;
+        font-size:16px;
+        text-transform: lowercase;
+    }
+    
 }

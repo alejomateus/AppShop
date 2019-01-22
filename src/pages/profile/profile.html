@@ -1,18 +1,78 @@
-<!--
-  Generated template for the ProfilePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>profile</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
+<ion-content>
+  <div
+    padding
+    [ngStyle]="{ 'background-image': 'url(' + background + '})' }"
+    class="header"
+  >
+    <ion-row>
+      <ion-col col-35 text-left>
+        <ion-icon name="settings"></ion-icon>
+      </ion-col>
+      <ion-col col-5 text-center>
+        <b> My information</b><br /><br />
+        <img [src]="user.profile_image" class="profile" /> <br />
+        <h6>{{ user.name }}</h6>
+      </ion-col>
+      <ion-col col-35 text-right>
+        <ion-icon
+          ios="ios-chatbubbles-outline"
+          name="ios-chatbubbles-outline"
+          [ngStyle]="{ 'font-size': 'font-size: 1.8em' }"
+        ></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-25 text-center>
+        <h6>0.98K</h6>
+        <span>Spend</span>
+      </ion-col>
+      <ion-col col-7 text-center>
+        <h6>14</h6>
+        <span>Already buy</span>
+      </ion-col>
+      <ion-col col-25 text-center>
+        <h6>68</h6>
+        <span>Collection</span>
+      </ion-col>
+    </ion-row>
+  </div>
+  <ion-segment [(ngModel)]="segmentSelect" margin-bottom>
+    <ion-segment-button *ngFor="let segment of segments" [value]="segment">
+      {{ segment }}
+    </ion-segment-button>
+  </ion-segment>
+  <ion-row
+    margin-horizontal
+    margin-bottom
+    *ngFor="let product of products"
+    class="products"
+  >
+    <ion-col col-12 no-padding>
+      <ion-row>
+        <ion-col col-4 class="margin_auto">
+          <img [src]="product.image" [ngClass]="{ full_width: true }" />
+        </ion-col>
+        <ion-col col-8 class="margin_auto">
+          <h6>{{ product.name }}</h6>
+          <span class="description">{{ product.description }}</span
+          ><br />
+          <ion-row>
+            <span class="prices">$ {{ product.price | number: "1.1-2" }}</span>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+      <ion-row class="options">
+        <ion-col col-4 text-center class="suboptions">
+          <ion-icon name="chatboxes"></ion-icon> &nbsp; <span>Review</span>
+        </ion-col>
+        <ion-col col-4 text-center class="suboptions">
+          <ion-icon name="cube"></ion-icon> &nbsp; <span>Logistics</span>
+        </ion-col>
+        <ion-col col-4 text-center >
+          <ion-icon name="ios-more"></ion-icon> &nbsp; 
+          <span>More</span>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
 </ion-content>
