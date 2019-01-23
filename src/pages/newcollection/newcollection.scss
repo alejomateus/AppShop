@@ -1,3 +1,66 @@
 page-newcollection {
-
+    .products_collections{
+        background-color: #fff;
+    }
+    .button{
+        background: #566a8c !important;
+        border-radius: 30px;
+        color:#fff;
+        padding: 3px 8px;
+        font-size:16px;
+        text-transform: lowercase;
+        bottom: 0px;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center !important;
+        padding: 15px;
+        position: absolute;
+    }
+    .title{
+        color:#fff;
+        border: 1px solid #fff;
+        .principal{
+            font-size:25px;
+        }
+    }
+    .year{
+        color:#fff;
+    }
+    .icon_back{
+        font-size:20px;
+        color: #fff;
+        background-color: #566a8c;
+        opacity: 0.5;
+        border-radius: 50%;
+        width: 22px;
+        text-align: center;
+    }
+    .icon_message{
+        font-size: 25px;
+        color: #b4bcca !important;
+    }
+    .col_message{
+        border-right: 1px solid #b4bcca;
+        margin: auto;
+        
+    }
+    .box_message{
+        padding: 16px 8px 8px 8px;
+        color: #b4bcca !important;
+        .description{
+            font-size:11px;
+        }
+    }
+    .sub_images{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+    }
+    .existences{
+        color: #fff;
+        background-color: #f59822;
+        padding: 2px 6px;
+        border-radius: 10px;
+    }
 }

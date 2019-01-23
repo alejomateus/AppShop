@@ -1,18 +1,52 @@
-<!--
-  Generated template for the ListmessagePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>listmessage</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
-</ion-content>
+<ion-content>
+    <ion-row padding-horizontal class="header">
+        <ion-col col-1 text-center no-padding padding-top class="margin_auto">
+            <ion-icon
+              name="ios-arrow-back"
+              [ngStyle]="{ 'font-size': 'font-size: 1.8em' }"
+              (click)="gotoback()"
+            ></ion-icon>
+          </ion-col>
+      <ion-col col-10 padding-top text-center>
+        <b>Message</b>
+      </ion-col>
+      <ion-col col-1 text-center no-padding padding-top class="margin_auto">
+        <ion-icon
+          name="ios-more"
+          [ngStyle]="{ 'font-size': 'font-size: 1.8em' }"
+        ></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-segment [(ngModel)]="segmentSelect" class="header">
+      <ion-segment-button *ngFor="let segment of segments" [value]="segment.name">
+        <ion-icon [name]="segment.icon"></ion-icon>
+        <span>{{ segment.name }}</span>
+      </ion-segment-button>
+    </ion-segment>
+    <div padding-top></div>
+    <div [ngSwitch]="segmentSelect">
+      <div *ngSwitchCase="'Store'">
+        <ion-row *ngFor="let chat of chatsavaible" class="box_chat" margin-bottom margin-horizontal>
+          <ion-col col-2 class="margin_auto">
+            <img [src]="chat.image" class="full_width img_circular" >
+          </ion-col>
+          <ion-col col-10 class="margin_auto">
+            <ion-row>
+              <ion-col col-8 no-padding>
+                  <h6>{{chat.brandName}}</h6>
+              </ion-col>
+              <ion-col col-4 no-padding text-right>
+                  <span class="description">{{chat.time}} min</span>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-12 no-padding>
+                  <span class="description">{{ chat.last_message}}</span>
+              </ion-col>
+            </ion-row>
+            </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </ion-content>
+  

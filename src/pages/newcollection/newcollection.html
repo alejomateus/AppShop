@@ -1,18 +1,46 @@
-<!--
-  Generated template for the NewcollectionPage page.
+<ion-content>
+  <ion-row padding-horizontal [ngStyle]="{ 'background-image': 'url(' + background + '})' }">
+    <ion-col col-12 margin-top>
+      <ion-icon  (click)="gotoback()" name="ios-arrow-back" class="icon_back"></ion-icon>
+    </ion-col>
+    <ion-col col-15></ion-col>
+    <ion-col col-9 text-center class="title">
+      <span class="principal">NEW COLLECTIONS</span>
+    </ion-col>
+    <ion-col col-15></ion-col>
+    <ion-col col-12 margin-bottom text-center>
+      <span class="year"> &bull; 2016 &bull;</span>
+    </ion-col>
+  </ion-row>
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
+  <ion-row margin-horizontal margin-top *ngFor="let product of products_collections" class="products_collections">
+    <ion-col col-12 no-padding>
+      <img [src]="product.image" class="full_width">
+      <label class="button">{{product.name}} <span>$ {{product.price | number: "1.1-2" }} </span></label>
+    </ion-col>
+    <ion-col col-12 no-padding>
+      <ion-row class="box_message">
+        <ion-col col-3 text-center class="col_message">
+          <ion-icon name="ios-chatboxes-outline" class="icon_message"></ion-icon>
+        </ion-col>
+        <ion-col col-9 class="margin_auto" padding-horizontal>
+          <span class="description"> {{product.description}}</span>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col col-12 padding-bottom padding-horizontal>
+      <ion-row>
+        <ion-col col-8>
+          <img src="https://via.placeholder.com/20x20.png" class="sub_images">
+          <img src="https://via.placeholder.com/20x20.png" class="sub_images">
+          <span class="existences">120</span>
+          <span>I want!</span>
+        </ion-col>
+        <ion-col col-4 text-right>
+            <ion-icon name="ios-chatbubbles-outline"></ion-icon> <span>119</span>
+        </ion-col>
+      </ion-row>
+    </ion-col>
 
-  <ion-navbar>
-    <ion-title>newcollection</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
+  </ion-row>
 </ion-content>

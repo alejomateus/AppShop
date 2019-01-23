@@ -37,7 +37,7 @@ export class StorePage {
         description:"Tile collection",
         image:"https://via.placeholder.com/100x100.png"
       }
-    ]
+    ];
     this.brand_products =[
       {
         name:"Elegant",
@@ -65,5 +65,7 @@ export class StorePage {
       }
     ]
   }
-
+  gotobrand(brand:any){
+    this.navCtrl.push("BrandPage",{brand:brand});
+  }
 }

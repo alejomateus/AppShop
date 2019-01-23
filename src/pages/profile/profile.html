@@ -62,13 +62,13 @@
         </ion-col>
       </ion-row>
       <ion-row class="options">
-        <ion-col col-4 text-center class="suboptions">
+        <ion-col col-4 text-center class="suboptions" (click)="gotoChat()">
           <ion-icon name="chatboxes"></ion-icon> &nbsp; <span>Review</span>
         </ion-col>
         <ion-col col-4 text-center class="suboptions">
           <ion-icon name="cube"></ion-icon> &nbsp; <span>Logistics</span>
         </ion-col>
-        <ion-col col-4 text-center >
+        <ion-col col-4 text-center (click)="detailproduct(product)" >
           <ion-icon name="ios-more"></ion-icon> &nbsp; 
           <span>More</span>
         </ion-col>

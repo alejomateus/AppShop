@@ -1,18 +1,73 @@
-<!--
-  Generated template for the DetailproductPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>detailproduct</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
+<ion-content>
+  <ion-row>
+    <img [src]="product.image" class="full_width" />
+    <ion-icon
+      name="ios-arrow-back"
+      class="icon_back"
+      (click)="gotoback()"
+    ></ion-icon>
+    <ion-col col-12 no-padding>
+      <ion-row class="box_product">
+        <ion-col col-1></ion-col>
+        <ion-col col-10 class="footer" padding>
+          <h5>{{ product.name }}</h5>
+          <span class="description">{{ product.description }}</span>
+          <ion-row padding-top>
+            <ion-col col-5 class="margin_auto" text-left>
+              <span>colour</span>
+            </ion-col>
+            <ion-col col-7 class="margin_auto" class="list" text-center>
+              <div
+                class="circulo"
+                *ngFor="let colour of product.characteristics.colors"
+                [ngStyle]="{ background: colour.value }"
+              ></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-5 class="margin_auto" text-left>
+              <span>size</span>
+            </ion-col>
+            <ion-col col-7 class="margin_auto" class="list" text-center>
+              <div
+                *ngFor="let size of product.characteristics.size"
+                class="size"
+              >
+                {{ size.value }}
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-5 class="margin_auto" text-left>
+              <span>quantity</span>
+            </ion-col>
+            <ion-col col-7 class="margin_auto" class="list" text-center>
+              <ion-icon
+                name="remove"
+                class="iconos"
+                (click)="modifyquantity(product.quantity - 1)"
+              ></ion-icon>
+              <span>&nbsp;&nbsp;{{ product.quantity }}&nbsp;&nbsp;</span>
+              <ion-icon
+                name="add"
+                class="iconos"
+                (click)="modifyquantity(product.quantity + 1)"
+              ></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <ion-row padding> </ion-row>
+  <ion-row padding-top>
+    <ion-col col-2> </ion-col>
+    <ion-col col-8 text-center>
+      <button ion-button color="primary" class="full_width">
+        $ {{ product.quantity * product.price | number: "1.1-2" }} Pay
+      </button>
+    </ion-col>
+    <ion-col col-2> </ion-col>
+  </ion-row>
 </ion-content>

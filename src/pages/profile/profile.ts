@@ -49,7 +49,12 @@ export class ProfilePage {
       }
     ];
   }
-
+  detailproduct(product:any){
+    this.navCtrl.push("DetailproductPage",{product:product});
+  }
+  gotoChat(){
+    this.navCtrl.push("ListmessagePage");
+  }
 
 
 }

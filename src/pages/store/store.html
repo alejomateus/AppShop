@@ -33,7 +33,7 @@
           ><br />
           <span>{{ brand.description }}</span
           ><br />
-          <button class="button">view</button>
+          <button class="button" (click)="gotobrand(brand)">view</button>
         </ion-col>
       </ion-row>
       <ion-row
@@ -49,7 +49,7 @@
           />
           <img [src]="brand.image" />
           <ion-row>
-            <ion-col col-2 class="margin_auto">
+            <ion-col col-2 class="margin_auto" (click)="gotobrand(brand)"> 
               <img [src]="brand.logo" [ngClass]="['full_width', 'image']" />
             </ion-col>
             <ion-col col-8>

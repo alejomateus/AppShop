@@ -1,28 +1,31 @@
-.tabs-md .tab-button[aria-selected=true] {
-    color: #566a8c !important;
+.tabs-md .tab-button[aria-selected="true"] {
+  color: #566a8c !important;
 }
 .tabs-md .tab-button {
-    color: #b4bcca !important;
+  color: #b4bcca !important;
 }
 .tabs-md .tab-button-icon {
-    color: #b4bcca !important;
+  color: #b4bcca !important;
 }
-.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
-    color: #566a8c !important;
+.tabs-md .tab-button[aria-selected="true"] .tab-button-icon {
+  color: #566a8c !important;
 }
-.margin_auto{
-    margin: auto !important;
+.margin_auto {
+  margin: auto !important;
 }
-.content{
-    color: #566a8c !important;
-    background-color: #5a67801c !important;
+.content {
+  color: #566a8c !important;
+  background-color: #f1f1f1 !important;
 }
-.full_width{
-    width: 100%;
+.content-md {
+  background-color: #f1f1f1 !important;
 }
-.button{
-    background: #566a8c !important;
-    border-radius: 10px;
-    color:#fff;
-    padding: 3px 8px;
+.full_width {
+  width: 100%;
+}
+.button {
+  background: #566a8c !important;
+  border-radius: 10px;
+  color: #fff;
+  padding: 3px 8px;
 }

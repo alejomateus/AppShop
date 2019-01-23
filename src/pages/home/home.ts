@@ -17,11 +17,13 @@ export class HomePage {
       {
         image: "https://via.placeholder.com/200x200.png",
         name: "Pure white water",
+        description:"Pillow surface is a uniform distribu",
         price: 14.25
       },
       {
         image: "https://via.placeholder.com/200x200.png",
         name: "Fish suede mats",
+        description:"Pillow surface is a uniform distribu",
         price: 21.0
       }
     ];
@@ -51,5 +53,11 @@ export class HomePage {
         description:"Pillow surface is a uniform distribu "
       }
     ];
+  }
+  gotoNewCollection(){
+    this.navCtrl.push("NewcollectionPage");
+  }
+  detailproduct(product:any){
+    this.navCtrl.push("DetailproductPage",{product:product});
   }
 }

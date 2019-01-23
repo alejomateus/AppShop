@@ -71,7 +71,7 @@ export class ShopcartPage {
   }
   modifyquantity(selected_product:any,quantity:number){
     this.select_products.forEach((product:any) => {
-      if(selected_product.id == product.id && quantity>0){
+      if(selected_product.id == product.id && quantity>-1){
         product.quantity= quantity;
       }
     });

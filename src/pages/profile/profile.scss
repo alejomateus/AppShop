@@ -1,8 +1,8 @@
 page-profile {
   .header {
     color: #fff;
-    span{
-        font-size: 9px;
+    span {
+      font-size: 9px;
     }
   }
   .prices {
@@ -12,11 +12,11 @@ page-profile {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0px 17px 55px -34px rgba(0, 0, 0, 0.75);
-    .options{
-        border-top: 1px solid #b4bcca;
-        .suboptions{
-            border-right: 1px solid #b4bcca;
-        }
+    .options {
+      border-top: 1px solid #b4bcca;
+      .suboptions {
+        border-right: 1px solid #b4bcca;
+      }
     }
   }
   .sections {
@@ -41,12 +41,10 @@ page-profile {
     border-radius: 50%;
     border: 3px solid #fff;
   }
-  h6{
-      margin-bottom: 0px;
+  h6 {
+    margin-bottom: 0px;
   }
-  ion-segment{
-      background: #fff;
+  ion-segment {
+    background: #fff;
   }
-  
-  
 }

@@ -1,3 +1,32 @@
 page-listmessage {
+  .header {
+    background-color: #566a8c !important;
+    color: #fff !important;
+  }
+  .description {
+    font-size: 12px;
+    color: #b4bcca;
+  }
+  .content {
+    color: #566a8c !important;
+    background-color: #5a67801c !important;
+  }
+  .segment-md .segment-button {
+    color: #fff !important;
+  }
 
+  .segment-md .segment-button.activated,
+  .segment-md .segment-button.segment-activated {
+    border-color: #fff;
+    opacity: 1;
+  }
+  .img_circular{
+      border-radius: 50%;
+  }
+  h6{
+      margin:0px;
+  }
+  .box_chat{
+      background-color: #fff;
+  }
 }

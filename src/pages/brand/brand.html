@@ -1,18 +1,24 @@
-<!--
-  Generated template for the BrandPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>brand</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
-</ion-content>
+<ion-content>
+    <ion-row>
+      <img [src]="brand.coverImage"  />
+      <ion-icon
+        name="ios-arrow-back"
+        class="icon_back"
+        (click)="gotoback()"
+      ></ion-icon>
+      <ion-col col-12 padding class="brand">
+        <h5>{{brand.name}}</h5>
+        <span class="description">{{brand.large_description}}</span>
+      </ion-col>
+    </ion-row>
+    <ion-row margin-horizontal>
+      <ion-col col-5 margin-right margin-top class="box_product" *ngFor="let product of products_brand">
+        <img [src]="product.image" >
+        <h5>{{product.name}}</h5>
+        <span class="description">{{product.description}}</span><br>
+        <span class="prices">$ {{product.price | number: "1.1-2" }}</span>
+      </ion-col>
+    </ion-row>
+    
+  </ion-content>
+  
